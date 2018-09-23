@@ -1,0 +1,41 @@
+{
+  "name": "music-app-frontend",
+  "version": "1.0.0",
+  "description": "front end of the music application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:development": "cross-env NODE_ENV=development node ./server.js",
+    "build:production": "cross-env NODE_ENV=production webpack -p --progress"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^3.9.3",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-import": "^1.9.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "express": "^4.16.3",
+    "file-loader": "^2.0.0",
+    "redux-logger": "^3.0.6",
+    "style-loader": "^0.23.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.19.1",
+    "webpack-dev-middleware": "^3.3.0",
+    "webpack-hot-middleware": "^2.24.2"
+  }
+}
