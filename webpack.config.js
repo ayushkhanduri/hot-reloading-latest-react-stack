@@ -5,7 +5,7 @@ const BUILD_DIR = path.resolve(__dirname,'build');
 const ENTRY_DIR = ['./src/app.jsx'];
 const minimizer = [];
 
-if(process.env.NODE_ENV === "development"){
+if(process.env.NODE_ENV === 'development'){
     ENTRY_DIR.push('webpack-hot-middleware/client');
 }else{
     minimizer.push(new UglifyJsPlugin({
@@ -65,7 +65,7 @@ let webpackConfig = {
     },
     mode: process.env.NODE_ENV,
     resolve: {
-        extensions: ['.js','.jsx']
+        extensions: ['.js','.jsx','.json']
     }
 }
 
