@@ -1,14 +1,14 @@
 {
-  "name": "music-app-frontend",
+  "name": "react-boiler-plate",
   "version": "1.0.0",
-  "description": "front end of the music application",
+  "description": "React got reloading stack with redux and router",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:development": "cross-env NODE_ENV=development node ./server.js",
     "build:production": "cross-env NODE_ENV=production webpack -p --progress"
   },
-  "author": "",
+  "author": "ayushkhanduri@gmail.com",
   "license": "ISC",
   "dependencies": {
     "antd": "^3.10.8",

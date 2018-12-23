@@ -1,10 +1,5 @@
 
-type clockAction = {
-    type: string
-};
-
-
-export const incrementCounter = ():clockAction  => (
+export const incrementCounter = () => (
     {
         type: "INCREMENT"
     }

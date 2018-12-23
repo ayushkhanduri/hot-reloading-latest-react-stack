@@ -25,7 +25,6 @@ let webpackConfig = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        // new webpack.ProvidePlugin()
     ],
     module:{
         rules:[

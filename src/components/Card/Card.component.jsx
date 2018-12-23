@@ -1,8 +1,8 @@
 import React,{ Component } from 'react';
-//import {MyC} from '@types/react';
 import {bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
 import CardUI from '../../presentational/Card/CardUI';
+import CounterComponent from '../Counter/Counter.component';
 
 import {AddCards,DeleteCard,UpdateCard} from '../../actions/card.action';
 
@@ -30,10 +30,11 @@ class Card extends Component {
     
     render() {
         const {allCards} = this.props; 
-        
+        console.log('cards render');
         return(
             <div id='grid'>
                 <CardUI deleteCard={this.deleteCard.bind(this)} data={allCards}/>
+                {/* <CounterComponent></CounterComponent> */}
             </div>
 
         )

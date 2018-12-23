@@ -4,18 +4,12 @@ import { bindActionCreators } from 'redux';
 
 import {incrementCounter} from '../../actions/counter.action';
 
+import PropTypes from 'prop-types';
 
-type Dispatcher = () => {};
-
-type CounterProps= {
-    time: number,
-    incrementCounter: Dispatcher
-}
-
-class CounterComponent extends Component<CounterProps,{}>{
+class CounterComponent extends Component{
     
     componentDidMount() {
-        setInterval(this.props.incrementCounter(),1000);
+        setInterval(this.props.incrementCounter,1000);
     }
 
 
@@ -26,17 +20,19 @@ class CounterComponent extends Component<CounterProps,{}>{
     }
 }
 
+CounterComponent.propTypes = {
+    time: PropTypes.number
+}
 
-const mapStateToProps = ({counter}) => (
+
+const mapStateToProps = ({Counter}) => (
     {
-        time: counter.time
+        time: Counter.time
     }
 )
 
-const mapActionsToProps = (dispatch) => (
-    {
-        bindActionCreators({incrementCounter})
-    }
+const mapActionsToProps = dispatch => (
+    bindActionCreators({incrementCounter},dispatch)    
 )
 
 export default connect(mapStateToProps,mapActionsToProps)(CounterComponent);
