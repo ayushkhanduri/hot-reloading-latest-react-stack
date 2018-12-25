@@ -27,14 +27,17 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-import": "^1.11.0",
+    "compression-webpack-plugin": "^2.0.0",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "express": "^4.16.4",
     "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "redux-logger": "^3.0.6",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3"
   }
