@@ -4,7 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const htmlPlugin = require('html-webpack-plugin');
 const compressionPlugin = require('compression-webpack-plugin');
 const BUILD_DIR = path.resolve(__dirname,'build');
-const ENTRY_DIR = ['./src/app.jsx'];
+const ENTRY_DIR = ['./src/app.tsx'];
 const minimizer = [];
 
 const plugins = [];
@@ -18,7 +18,7 @@ if(process.env.NODE_ENV === 'development'){
         parallel: true,
     }));
 
-    plugins.push(new htmlPlugin(
+    plugins.push(new htmlPlugin(    
         {
             hash: true,
             template: './src/index.html',
@@ -68,6 +68,19 @@ let webpackConfig = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(ts|tsx)$/,
+                use: {
+                    loader:'ts-loader'
+                }
+            },
+            { 
+                enforce: "pre", 
+                test: /\.js$/, 
+                use: {
+                    loader: "source-map-loader"
+                } 
             }
 
         ]
@@ -80,7 +93,7 @@ let webpackConfig = {
     },
     mode: process.env.NODE_ENV,
     resolve: {
-        extensions: ['.js','.jsx','.json']
+        extensions: ['.js','.jsx','.json','.ts','.tsx']
     }
 }
 

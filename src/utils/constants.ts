@@ -1,5 +1,4 @@
-
-export const cards= [
+export const cards: Array<CardType.ICard>= [
     {
         title: "First Card !!",
         content: "This is the first card"

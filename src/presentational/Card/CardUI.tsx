@@ -1,10 +1,15 @@
-import React from 'react';
+import * as React from 'react';
 
 import {Card,Col,Row} from 'antd';
 
 import './card.css';
 
-const CardUI = ({data,deleteCard}) => (
+interface ICardUI{
+    data: Array<CardType.ICard>,
+    deleteCard: Function
+}
+
+const CardUI: React.StatelessComponent<ICardUI>  = ({data,deleteCard}:{data: Array<CardType.ICard>,deleteCard:Function})=> (
     <Row gutter={16} className='card-container'>
         {
             data.map(item => 
