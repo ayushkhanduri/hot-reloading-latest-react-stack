@@ -59,7 +59,6 @@ let webpackConfig = {
             },
             {
                 test: /\.(js|jsx)$/,
-                exclude: /(node_modules|bower_components)/,
                 use: [
                     {
                         loader: 'babel-loader',
@@ -67,6 +66,11 @@ let webpackConfig = {
                             presets: ['@babel/preset-env']
                         }
                     }
+                ],
+
+                exclude: [
+                    // /node_modules\/mutationobserver-shim/g,
+                    /(node_modules|bower_components)/,
                 ]
             },
             {
@@ -80,7 +84,10 @@ let webpackConfig = {
                 test: /\.js$/, 
                 use: {
                     loader: "source-map-loader"
-                } 
+                },
+                exclude: [
+                    /node_modules\/mutationobserver-shim/g
+                ] 
             }
 
         ]
