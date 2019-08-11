@@ -3,7 +3,6 @@ import {bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
 
 import CardUI from '../../presentational/Card/CardUI';
-import CounterComponent from '../Counter/Counter.component';
 
 import {AddCards,DeleteCard} from '../../actions/card.action';
 
@@ -42,7 +41,6 @@ class Card extends React.Component<IPropCardComponent ,{}>{
         return(
             <div id='grid'>
                 <CardUI deleteCard={this.deleteCard.bind(this)} data={allCards}/>
-                <CounterComponent></CounterComponent>
             </div>
 
         )
